@@ -1,10 +1,5 @@
 import React from 'react';
-import {
-  AppRoot,
-  SplitLayout,
-  SplitCol,
-  PanelHeader,
-} from '@vkontakte/vkui';
+import { AppRoot, SplitLayout, SplitCol } from '@vkontakte/vkui';
 import '@vkontakte/vkui/dist/vkui.css';
 import { MainComponent } from './Components/MainComponent';
 
