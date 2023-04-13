@@ -7,7 +7,6 @@ export function MainComponent() {
   const [activePanel, setActivePanel] = useState('main');
 
   useEffect(() => {
-    console.log(location);
     setActivePanel(location.pathname === '/' ? 'main' : location.pathname);
   }, [location]);
 
