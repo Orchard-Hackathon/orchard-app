@@ -23,8 +23,11 @@ const renderApp = () => {
   );
 };
 
-renderApp();
+
 
 bridge
   .send('VKWebAppInit')
+  .then(() => {
+    renderApp();
+  })
   .catch((error) => console.log(`App not init! ${error}`));
