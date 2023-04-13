@@ -1,0 +1,19 @@
+.text {
+  display: inline-block;
+}
+
+.alignCenter {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 15px;
+}
+
+.container {
+  padding-top: 20px;
+  text-align: center;
+  padding-bottom: 40px;
+}
+
+.info {
+  margin-bottom: 15px;
+}
