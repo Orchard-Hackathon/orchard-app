@@ -8,8 +8,6 @@ import {
 } from './types';
 
 export const getMyVegetable = (quizResult: string[], launchParams: string): Promise<IPrediction[]> => {
-  console.log(quizResult);
-
   return new Promise(async (resolve, reject) => {
     const response = await fetch(
       'https://api-orchard.panfilov.tech/classify',
@@ -29,7 +27,6 @@ export const getMyVegetable = (quizResult: string[], launchParams: string): Prom
 
     if (response.ok) {
       const uniqueVegetables = getUniqueVegetables(predicts);
-      console.log(uniqueVegetables);
       resolve(uniqueVegetables);
     } else {
       reject(new Error(error));

@@ -21,8 +21,7 @@ export const ResultModal = ({ vegetables, closeModal, share }: IResultModal) => 
       subheader="Вы, конечно, произошли от Homo Habilis, но мы нашли интересные результаты в вашем геноме!"
       actions={
         <ButtonGroup stretched mode="vertical" gap="s">
-          <Button stretched onClick={closeModal}>Понятно!</Button>
-
+          <Button stretched onClick={closeModal} size="l">Понятно!</Button>
         </ButtonGroup>
     }
       onClose={closeModal}
@@ -51,6 +50,7 @@ export const ResultModal = ({ vegetables, closeModal, share }: IResultModal) => 
                   onClick={() => share(vegetable)}
                   mode="secondary"
                   before={<Icon20ShareOutline />}
+                  size="l"
                 >
                   Поделиться
                 </Button>
