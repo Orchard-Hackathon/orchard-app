@@ -101,7 +101,8 @@ export const QuizModal = ({
   return (
     <ModalCard
       id={QUIZ_MODAL}
-      header={apiError ? 'Ошибка сервера' : question}
+      header={apiError ? 'Ошибка сервера' : `Вопрос ${step}`}
+      subheader={!apiError && question}
     >
       {apiError ? (
           <>
