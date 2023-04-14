@@ -1,8 +1,19 @@
-import { View, Panel, PanelHeader, Group, Div, Button, ButtonGroup } from '@vkontakte/vkui'
+import {
+  View,
+  Panel,
+  PanelHeader,
+  Group,
+  Div,
+  Button,
+  ButtonGroup,
+  CellButton,
+  Avatar
+} from '@vkontakte/vkui';
 import { useLocation } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import { IVegetable } from '../../types';
 import { Results } from '../Results';
+import { Icon56HandPointUpLeftOutline } from '@vkontakte/icons';
 
 interface IMainComponentProps {
   startQuiz: () => void;
@@ -34,14 +45,29 @@ export const MainComponent = ({ startQuiz, vegetables, share }: IMainComponentPr
           }
           <Div style={{ textAlign: 'center', maxWidth: '500px' }}>
             <ButtonGroup mode="vertical" stretched>
-              <Button
-                stretched
-                onClick={startQuiz}
-              >
-                {
-                  vegetables?.length ? 'Перепроверить результаты' : 'Узнать о себе всё!'
-                }
-              </Button>
+              {
+                vegetables?.length ? (
+                  <Button
+                    stretched
+                    onClick={startQuiz}
+                    size="l"
+                  >
+                    Перепроверить результаты
+                  </Button>
+                ) : (
+                  <CellButton
+                    style={{ paddingTop: '10px', paddingBottom: '10px' }}
+                    onClick={startQuiz}
+                    before={
+                      <Avatar withBorder={false} size={80}>
+                        <Icon56HandPointUpLeftOutline />
+                      </Avatar>
+                    }
+                  >
+                    Узнать о себе всё!
+                  </CellButton>
+                )
+              }
             </ButtonGroup>
           </Div>
         </Group>

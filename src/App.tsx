@@ -15,7 +15,6 @@ export const App = () => {
   const [quizInfo, setQuizInfo] = useState<IQuizItem>(quiz[quizStep - 1]);
   const [popout, setPopout] = useState<ReactNode | null>(null);
   const [launchParams, setLaunchParams] = useState('');
-  console.log(launchParams);
 
   const closeModal = () => {
     setActiveModal(null);
@@ -33,7 +32,6 @@ export const App = () => {
   };
 
   const share = (vegetable: IVegetable) => {
-    console.log(vegetable);
     setLoading(true);
     bridge
       .send('VKWebAppShowStoryBox', {

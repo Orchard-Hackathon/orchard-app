@@ -25,6 +25,7 @@ export const Results = ({ vegetables, share }: IResults) => {
                     onClick={() => share(vegetable)}
                     mode="primary"
                     before={<Icon20ShareOutline />}
+                    size="l"
                   >
                     Поделиться
                   </Button>
