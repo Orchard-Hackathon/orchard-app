@@ -38,6 +38,7 @@ export const Modal = ({
         step={step}
         question={quizItem.question}
         placeholder={quizItem.placeholder}
+        title={quizItem.title}
         setResultModal={setResultModal}
         setQuizModal={setQuizModal}
         setLoading={setLoading}

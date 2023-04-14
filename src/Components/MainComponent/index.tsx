@@ -32,7 +32,7 @@ export const MainComponent = ({ startQuiz, vegetables, share }: IMainComponentPr
   return (
     <View activePanel={activePanel}>
       <Panel id="main">
-        <PanelHeader>Какой ты сегодня овощ?</PanelHeader>
+        <PanelHeader>Какой ты овощ?</PanelHeader>
         <Group style={{
           flex: '1',
           display: 'flex',

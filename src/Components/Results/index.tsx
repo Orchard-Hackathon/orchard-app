@@ -19,7 +19,7 @@ export const Results = ({ vegetables, share }: IResults) => {
             <Group mode="plain" key={index}>
               <RichCell
                 before={<Avatar size={120} src={vegetable.picture} />}
-                subhead={`Точность: ${getPercents(vegetable.score)}`}
+                subhead={`Доля: ${getPercents(vegetable.score)}`}
                 actions={
                   <Button
                     onClick={() => share(vegetable)}

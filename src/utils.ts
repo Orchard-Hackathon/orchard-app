@@ -75,3 +75,8 @@ const isVegetable = (vegetable: Vegetables) => {
 export const getPercents = (score: number) => {
   return `${(score * 100).toFixed(2)}%`;
 }
+
+export const getHostName = () => {
+  const url = new URL(window.location.href);
+  return url.host;
+}

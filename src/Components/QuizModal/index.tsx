@@ -9,6 +9,7 @@ interface IQuizModal {
   id: string;
   question: string;
   placeholder: string;
+  title: string;
   step: number;
   setQuizModal: (step: number) => void;
   setResultModal: (vegetables: IVegetable[]) => void;
@@ -20,11 +21,11 @@ interface IQuizModal {
 export const QuizModal = ({
   question,
   placeholder,
+  title,
   step,
   setQuizModal,
   setResultModal,
   setLoading,
-  closeModal,
   launchParams,
 }: IQuizModal) => {
   const [value, setValue] = useState('');
@@ -68,7 +69,7 @@ export const QuizModal = ({
   }, [setResultModal, setLoading, launchParams]);
 
   const isValueValid = () => {
-    return value.trim().length >= 3;
+    return value.trim().length >= 2;
   };
 
   useEffect(() => {
@@ -101,7 +102,7 @@ export const QuizModal = ({
   return (
     <ModalCard
       id={QUIZ_MODAL}
-      header={apiError ? 'Ошибка сервера' : `Вопрос ${step}`}
+      header={apiError ? 'Ошибка сервера' : `${step}. ${title}`}
       subheader={!apiError && question}
     >
       {apiError ? (

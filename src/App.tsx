@@ -7,6 +7,7 @@ import { IQuizItem, IVegetable } from './types';
 import { quiz } from './templates';
 import { ReactNode, useEffect } from 'react';
 import bridge from '@vkontakte/vk-bridge';
+import { getHostName } from './utils';
 
 export const App = () => {
   const [activeModal, setActiveModal] = useState<string | null>(null);
@@ -36,7 +37,7 @@ export const App = () => {
     bridge
       .send('VKWebAppShowStoryBox', {
         background_type: 'image',
-        url: `https://user209318348-ko7wvnxm.wormhole.vk-apps.com/${vegetable.picture}`,
+        url: `https://${getHostName()}/${vegetable.picture}`,
         attachment: {
           type: 'url',
           url: 'https://vk.com/app51613540',
