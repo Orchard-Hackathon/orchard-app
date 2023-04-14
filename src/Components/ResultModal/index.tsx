@@ -40,7 +40,7 @@ export const ResultModal = ({ vegetables, closeModal, share }: IResultModal) => 
                   <Text className={styles.text}>{vegetable.title}</Text>
                 </div>
                 <div className={styles.info}>
-                  <Text className={styles.text} weight="1">Точность:</Text>{" "}
+                  <Text className={styles.text} weight="1">Доля:</Text>{" "}
                   <Text className={styles.text}>{getPercents(vegetable.score)}</Text>
                 </div>
                 <div className={styles.alignCenter}>

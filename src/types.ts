@@ -22,7 +22,9 @@ export interface IVegetable {
 
 export interface IQuizItem {
   question: string;
+  title: string;
   placeholder: string;
+  step: number;
 }
 
 export interface IPrediction {
@@ -37,19 +39,19 @@ export interface IVegetablesResponse {
 }
 
 export const pictures: Record<Vegetables, string> = {
-  [Vegetables.TOMATOES]: 'giphy.gif',
-  [Vegetables.BELL_PEPPERS]: 'giphy.gif',
-  [Vegetables.BOK_CHOY]: 'giphy.gif',
-  [Vegetables.BROCCOLI]: 'giphy.gif',
-  [Vegetables.CORN]: 'giphy.gif',
-  [Vegetables.CABBAGE]: 'giphy.gif',
-  [Vegetables.CARROT]: 'giphy.gif',
-  [Vegetables.RADISH]: 'giphy.gif',
-  [Vegetables.SPINACH]: 'giphy.gif',
-  [Vegetables.BRUSSELS_SPROUTS]: 'giphy.gif',
-  [Vegetables.CUCUMBERS]: 'giphy.gif',
-  [Vegetables.EGGPLANT]: 'giphy.gif',
-  [Vegetables.HABANERO_PEPPER]: 'giphy.gif',
+  [Vegetables.TOMATOES]: 'Tomatoes.jpg',
+  [Vegetables.BELL_PEPPERS]: 'Bell_peppers.jpg',
+  [Vegetables.BOK_CHOY]: 'Bok_choy.jpg',
+  [Vegetables.BROCCOLI]: 'Broccoli.jpg',
+  [Vegetables.CORN]: 'Corn.jpg',
+  [Vegetables.CABBAGE]: 'Cabbage.jpg',
+  [Vegetables.CARROT]: 'Carrot.jpg',
+  [Vegetables.RADISH]: 'Radish.jpg',
+  [Vegetables.SPINACH]: 'Spinach.jpg',
+  [Vegetables.BRUSSELS_SPROUTS]: 'Brussels_sprouts.jpg',
+  [Vegetables.CUCUMBERS]: 'Cucumbers.jpg',
+  [Vegetables.EGGPLANT]: 'Eggplant.jpg',
+  [Vegetables.HABANERO_PEPPER]: 'Habanero_pepper.jpg',
 }
 
 export const vegetableTitles: Record<Vegetables, string> = {
